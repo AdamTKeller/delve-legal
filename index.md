@@ -4,7 +4,7 @@ title: Delve — Privacy Policy
 
 # Privacy Policy
 
-**Last updated:** May 6, 2026
+**Last updated:** May 10, 2026
 
 Delve is a mobile app that scans bookshelves and recommends books based on your reading taste. This policy explains what data Delve collects, how it's used, and the choices you have.
 
@@ -50,6 +50,7 @@ Each time you scan a shelf:
 - The photo is uploaded to Delve's API and forwarded to Anthropic's Claude API for book identification. **Delve does not save the image on its own servers** — it streams through the request and is discarded.
 - The most recent 3 scans are cached **locally on your device** (image file + identified books + recommendations) so the home screen can show thumbnails. These never leave your phone unless you re-scan.
 - A scan record is kept on the server with: scan ID, timestamp, image size in bytes, the AI model used, token counts, latency, number of books identified, status (success / quota-denied / error), and any error code. **The image bytes themselves are not stored.**
+- If you grant location permission, an approximate location (rounded to about 100 metres) is stored with each scan record. Delve does not display your location anywhere in the app today; it is collected so that, in the future, Delve can notify you when a book on your want-list shows up at a store near you. The permission is asked only when you scan, and you can revoke it at any time in your phone's settings. Stored locations are deleted along with your account.
 
 ### Recommendation data
 When recommendations are generated, Delve sends Anthropic a condensed summary of your taste profile (loved books, disliked books, want-to-read list, genre interests, adventure level). The full recommendation result is logged against your account along with token usage and the AI model used.
